@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="card m-2" style="width: 100%;" *ngIf="postDetails">
+        <div class="card-body">
+          <h5 class="card-title">{{ postDetails.title }}</h5>
+          <p class="card-text">{{ postDetails.body }} </p>
+          <p class="card-text">Author id: {{ postDetails.userId }} </p>
+          <a href="#" class="btn btn-primary mr-1" [routerLink]="['edit', postDetails.id]">Edit</a>
+          <a href="#" class="btn btn-danger ml-1" [routerLink]="['delete', postDetails.id]">Delete</a>
+        </div>
+    </div>
+</div>
